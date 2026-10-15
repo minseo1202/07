@@ -1,18 +1,19 @@
 #include <stdio.h>
 
-int inc(int counter);
+void f(void);
+int i;
 
 int main(void)
 {
-    int i = 10;   // 슬라이드엔 초기화가 없어서 10으로 지정
-    printf("함수 호출전 i=%d\n", i);
-    inc(i);
-    printf("함수 호출후 i=%d\n", i);
+    for (i = 0; i < 5; i++)
+    {
+        f();
+    }
     return 0;
 }
 
-int inc(int counter)
+void f(void)
 {
-    counter++;
-    return counter;
+    for (i = 0; i < 10; i++)
+        printf("#");
 }
